@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="750.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication2.FXMLDocumentController">
+   <children>
+      <TextField fx:id="quantity" layoutX="213.0" layoutY="335.0" />
+      <TextField fx:id="bound" layoutX="213.0" layoutY="205.0" />
+      <TextField fx:id="origin" layoutX="213.0" layoutY="165.0" />
+      <TextField fx:id="stream" layoutX="213.0" layoutY="293.0" />
+      <TextField fx:id="discount" layoutX="213.0" layoutY="249.0" />
+      <TextField fx:id="sell" layoutX="213.0" layoutY="121.0" />
+      <TextField fx:id="cost" layoutX="213.0" layoutY="81.0" />
+      <Button fx:id="simulate" layoutX="155.0" layoutY="31.0" mnemonicParsing="false" onAction="#handleButtonAction" text="SIMULATE" />
+      <Label layoutX="32.0" layoutY="388.0" text="DEMAND" />
+      <Label layoutX="29.0" layoutY="339.0" text="QUANTITY" />
+      <Label layoutX="15.0" layoutY="209.0" text="RANDOM NUMBER BOUND" />
+      <Label layoutX="15.0" layoutY="160.0" text="RANDOM NUMBER ORIGIN" />
+      <Label layoutX="22.0" layoutY="297.0" text="STREAM SIZE" />
+      <Label layoutX="28.0" layoutY="253.0" text="DISCOUNT" />
+      <Label layoutX="14.0" layoutY="125.0" text="SELLING PRICE PER UNIT" />
+      <Label layoutX="14.0" layoutY="85.0" text="COST PRICE  PER UNIT" />
+      <TableView fx:id="tableForReading" layoutX="93.0" layoutY="560.0" prefHeight="84.0" prefWidth="248.0" AnchorPane.bottomAnchor="240.0">
+         <columns>
+            <TableColumn fx:id="Profit" prefWidth="121.0" text="PROFIT" />
+            <TableColumn fx:id="Probabilty" prefWidth="125.0" text="PROBABILITY" />
+         </columns>
+      </TableView>
+      <ChoiceBox fx:id="demand" layoutX="213.0" layoutY="384.0" prefWidth="150.0" />
+      <BarChart fx:id="BarChart" layoutX="3.0" layoutY="535.0" prefHeight="199.0" prefWidth="611.0" title="Chart">
+         <xAxis>
+            <CategoryAxis label="Profit" side="BOTTOM" fx:id="xAxis" />
+         </xAxis>
+         <yAxis>
+            <NumberAxis fx:id="yAxis" label="Count" prefHeight="115.0" prefWidth="49.0" side="LEFT" tickLabelRotation="5.2" />
+         </yAxis>
+      </BarChart>
+   </children>
+   <effect>
+      <InnerShadow />
+   </effect>
+</AnchorPane>
